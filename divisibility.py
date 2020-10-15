@@ -1,6 +1,6 @@
 def number():
-    a = True
-    while a == True:
+    a = 2
+    if a == 2:
         try:
             number = float(input("Enter your number:  "))
             divisibility_number = float(input("Enter your divisibility number:  "))
@@ -14,7 +14,7 @@ def number():
                         pass
                     elif again == "n" or again == "no" or again == "N" or again == "No":
                         print("Good bye")
-                        a = False
+                        a = 3
                     else:
                         print("I did not understand you")
                         again_func()
@@ -28,7 +28,7 @@ def number():
                         pass
                     elif again == "n" or again == "no" or again == "N" or again == "No":
                         print("Good bye")
-                        a = False
+                        a = 3
                     else:
                         print("I did not understand you")
                         again_func()
@@ -36,3 +36,6 @@ def number():
                 
         except ValueError:
             print("Pls input a number or a number with a decimal")
+    else:
+        exit()
+number()
