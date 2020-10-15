@@ -26,6 +26,7 @@ if activity == "Money" or activity == "money" or activity == "a" or activity == 
                 activity()
             else:
                 print("I did not understand you")
+                again()
         again()
     elif what_convert == "a":   
         ksd_cash = int(input("Enter how much kenya shillings you want to convert: "))
@@ -38,11 +39,13 @@ if activity == "Money" or activity == "money" or activity == "a" or activity == 
                 activity()
             else:
                 print("I did not understand you")
+                again()
         again()
     else:
         print("I did not understand you")
+        converter()
 elif activity == "b":
-    def whatconverting():
+    def activity_converting():
         global what_convert
         what_convert = input("""
         Do you want to convert
@@ -56,86 +59,108 @@ elif activity == "b":
         
         
         """)
-    whatconverting()
+    activity()
     if what_convert == "a":
-        def again():
+        def km_m():
 
             km = float(input("Enter the amount in km:  "))
             print("The amount in meters is ",km * 1000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                again()
+                km_m()
             elif again == "n":
-                whatconverting()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again()
+        km_m()
     elif what_convert == "b":
-        def again():
+        def m_km():
             m = float(input("Enter the amount in m:  "))
             print("The amount in km is ",m / 1000)
-            
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                again()
+                m_km()
             elif again == "n":
-                whatconverting()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again()
+        m_km()
     elif what_convert == "c":
-        def again():
+        def m_cm():
             m = float(input("Enter the amount in m:  "))
             print("The amount in centimeters is ",m * 1000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                again()
+                m_cm()
             elif again == "n":
-                activity()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again()
+        m_cm()
     elif what_convert == "d":
-        def again():
+        def cm_m():
 
             cm = float(input("Enter the amount in cm:  "))
-            print("The amount in cm is ", cm/1000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            print("The amount in m is ", cm/1000)
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                whatconverting()
+                cm_m()
             elif again == "n":
-                activity()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again()
+        cm_m()
     elif what_convert == "e":
-        def again():
+        def km_cm():
             km = float(input("Enter the amount in km:  "))
             print("The amount in cm is ", km*1000000)
-            
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                again()
+                km_cm()
             elif again == "n":
-                whatconverting()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again_func()
+        km_cm()
     elif what_convert == "f":
-        def again():
+        def cm_km():
 
             cm = float(input("Enter the amount in cm:  "))
             print("The amount in km is ", cm/1000000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
-                again()
+                cm_km()
             elif again == "n":
-                whatconverting()
+                activity_converting()
             else:
                 print("I did not understand you")
-        again()
+                again_func()
+        cm_km()
     elif what_convert == "g":
-        activity()
+        activity_converting()
 elif activity == "c":
 
     def converter():
@@ -152,65 +177,96 @@ elif activity == "c":
          """)
     converter()
     if what_convert == "a":
-        def again():
+        def l_ml():
             l = int(input("Enter the amount in l:  "))
             print("The amound in ml is ",l*1000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+        l_ml()
     elif what_convert == "b":
-        def again():
+        def ml_l():
             ml = int(input("Enter the amount in ml:  "))
             print("The amound in l is ",ml/1000)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+            else:
+                print("I did not understand you")
+                again_func()
+        ml_l()
     elif what_convert == "c":
-        def again():
+        def dl_l():
             dl = int(input("Enter the amount in dl:  "))
             print("The amound in l is ",dl/10)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+            else:
+                print("I did not understand you")
+                again_func()
+        dl_l()
     elif what_convert == "d":
-        def again():
+        def l_dl():
             l = int(input("Enter the amount in l:  "))
             print("The amound in dl is ",l*10)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+            else:
+                print("I did not understand you.")
+                again_func()
+        l_dl()
     elif what_convert == "e":
-        def again():
+        def ml_dl():
             ml = int(input("Enter the amount in ml:  "))
             print("The amound in dl is ",ml/100)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+            else:
+                print("I did not understand you")
+                again_func()
+        ml_dl()
     elif what_convert == "f":
-        def again():
+        def dl_ml():
             dl = int(input("Enter the amount in dl:  "))
             print("The amound in ml is ",dl*10)
-            again = input("Do you want to convert again Yes(y) or No(n):  ")
+            def again_func():
+                global again
+                again = input("Do you want to convert again Yes(y) or No(n):  ")
+            again_func()
             if again == "y":
                 converter()
             elif again == "n":
                 activity()
-        again()
+            else:
+                print("I did not understand you")
+                again_func()
+        dl_ml()
     elif what_convert == "g":
         activity()
 elif activity == "d":
