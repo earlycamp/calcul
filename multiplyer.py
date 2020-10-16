@@ -10,10 +10,10 @@ def multiply():
                 again = input("Do you want to try again. Yes(y) or No(n)?  ")
             again_funct()
             if again == "y" or again == "Y" or again == "yes" or again == "Y":
-                pass
+                multiply()
             elif again == "n" or again == "N" or again == "no" or again == "No":
-                print("Good")
-                c = False
+                main_actvities()
+                
             else:
                 print("I did not understand you")
                 again_funct()
