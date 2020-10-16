@@ -199,7 +199,7 @@ elif activity == "c":
             if again == "y":
                 converter()
             elif again == "n":
-                activity()
+                converter()
             else:
                 print("I did not understand you")
                 again_func()
@@ -214,7 +214,7 @@ elif activity == "c":
             if again == "y":
                 converter()
             elif again == "n":
-                activity()
+                converter()
             else:
                 print("I did not understand you")
                 again_func()
@@ -230,7 +230,7 @@ elif activity == "c":
             if again == "y":
                 converter()
             elif again == "n":
-                activity()
+                converter()
             else:
                 print("I did not understand you.")
                 again_func()
@@ -246,7 +246,7 @@ elif activity == "c":
             if again == "y":
                 converter()
             elif again == "n":
-                activity()
+                converter()
             else:
                 print("I did not understand you")
                 again_func()
@@ -270,7 +270,7 @@ elif activity == "c":
     elif what_convert == "g":
         activity()
 elif activity == "d":
-    print("Bye")
+    main_actvities()
 else:
     print("I did not understand you")
     activity()
