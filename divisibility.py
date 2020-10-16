@@ -14,7 +14,7 @@ def number():
                         pass
                     elif again == "n" or again == "no" or again == "N" or again == "No":
                         print("Good bye")
-                        a = 3
+                        main_actvities()
                     else:
                         print("I did not understand you")
                         again_func()
@@ -28,7 +28,7 @@ def number():
                         pass
                     elif again == "n" or again == "no" or again == "N" or again == "No":
                         print("Good bye")
-                        a = 3
+                        main_actvities()
                     else:
                         print("I did not understand you")
                         again_func()
